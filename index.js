@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Serve static files from the root directory
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(__dirname + "/public/"));
 
 // Define a route to serve the index.html file
 app.get('/', (req, res) => {
