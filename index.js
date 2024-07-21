@@ -1,5 +1,5 @@
 const express = require('express');
-const path = require('path'); // Import the 'path' module
+const path = require('path');
 
 const app = express();
 
@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Serve static files from the root directory
-app.use(express.static(path.join(__dirname, '.')));
+app.use(express.static(path.join(__dirname)));
 
 // Define a route to serve the index.html file
 app.get('/', (req, res) => {
